@@ -192,7 +192,7 @@ class StreamChatClient {
 
   StreamSubscription<ConnectionStatus>? _connectionStatusSubscription;
 
-  final _eventController = StreamController<Event>();
+  final _eventController = StreamController<Event>.broadcast();
 
   /// Stream of [Event] coming from [_ws] connection
   /// Listen to this or use the [on] method to filter specific event types
